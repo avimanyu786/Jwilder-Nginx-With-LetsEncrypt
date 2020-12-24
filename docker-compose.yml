@@ -15,7 +15,7 @@ services:
       - certs:/etc/nginx/certs:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./client_max_upload_size.conf:/etc/nginx/conf.d/client_max_upload_size.conf
-      #- ./www.domain.com:/etc/nginx/vhost.d/www.domain.com
+      - ./www.domain.com:/etc/nginx/vhost.d/www.domain.com
     labels:
       - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
     restart: always
